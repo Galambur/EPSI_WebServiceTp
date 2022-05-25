@@ -10,12 +10,12 @@ namespace AgenceVoyage.Controllers
 {
     [ApiController]
     [Route("/reservation")]
-    public class DestinationDirecteController : ControllerBase
+    public class ReservationController : ControllerBase
     {
 
         public tpagencevoyageContext model = new tpagencevoyageContext();
 
-        public DestinationDirecteController()
+        public ReservationController()
         {
         }
 
@@ -27,18 +27,15 @@ namespace AgenceVoyage.Controllers
         }
 
         [HttpPost]
-        [Route("/reservation/{idTrain}")]
-        public IActionResult Post([FromQuery()] int idTrain, [FromBody()] Reservation reservationToAdd)
+        [Route("/reservation/nbrPassagers")]
+        public IActionResult ModifyNbrPassagers([FromBody()] Reservation reservationToModify)
         {
-            var trainReservation = new Trainreservation();
-            model.Reservation.Add(reservationToAdd);
+            var reservation = model.Reservation.Single(r => r.IdReservation == reservationToModify.IdReservation);
             try
             {
-                trainReservation.IdReservation = reservationToAdd.IdReservation;
-                trainReservation.IdTrain = idTrain;
-                model.Trainreservation.Add(trainReservation);
+                reservation.NbrPassager = reservationToModify.NbrPassager;
                 model.SaveChanges();
-                return Created("/reservation", reservationToAdd);
+                return Ok();
             } catch (Exception e)
             {
                 throw e;
