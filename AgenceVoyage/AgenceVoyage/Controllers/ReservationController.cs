@@ -26,6 +26,17 @@ namespace AgenceVoyage.Controllers
             return reservations;
         }
 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var reservation = model.Reservation.Single(r => r.IdReservation == id);
+
+            if (reservation == null)
+                return BadRequest("Reservation non trouvée");
+
+            return Ok(reservation);
+        }
+
         [HttpPost]
         [Route("/reservation/nbrPassagers")]
         public IActionResult ModifyNbrPassagers([FromBody()] Reservation reservationToModify)
