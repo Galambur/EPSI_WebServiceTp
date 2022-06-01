@@ -25,12 +25,13 @@ namespace AgenceVoyage.Controllers
         {
             try
             {
-                var trainReservation = new Trainreservation(reservationSimpleToAdd.IdReservation, idTrain);
-                model.Trainreservation.Add(trainReservation);
-
-                model.Reservation.Add(reservationSimpleToAdd);
-
+                var reservationAdd = model.Reservation.Add(reservationSimpleToAdd);
                 model.SaveChanges();
+
+                var trainReservation = new Trainreservation(reservationAdd.Entity.IdReservation, idTrain);
+                model.Trainreservation.Add(trainReservation);
+                model.SaveChanges();
+
                 return Created("/reservationSimple/" + idTrain, reservationSimpleToAdd);
             }
             catch (Exception e)

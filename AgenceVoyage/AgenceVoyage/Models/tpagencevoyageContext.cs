@@ -101,6 +101,10 @@ namespace AgenceVoyage.Models
                 entity.HasKey(e => e.IdReservation)
                     .HasName("PRIMARY");
 
+                // https://stackoverflow.com/questions/36155429/auto-increment-on-partial-primary-key-with-entity-framework-core
+                entity.Property(e => e.IdReservation)
+                    .ValueGeneratedOnAdd();
+
                 entity.ToTable("reservation");
 
                 entity.HasIndex(e => e.IdClient)
