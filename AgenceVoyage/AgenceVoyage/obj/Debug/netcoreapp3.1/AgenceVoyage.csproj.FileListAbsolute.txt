@@ -42,8 +42,6 @@ D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\Agenc
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.RazorAssemblyInfo.cache
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.RazorAssemblyInfo.cs
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\staticwebassets\AgenceVoyage.StaticWebAssets.Manifest.cache
-D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\staticwebassets\AgenceVoyage.StaticWebAssets.xml
-D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\scopedcss\bundle\AgenceVoyage.styles.css
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.TagHelpers.input.cache
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.TagHelpers.output.cache
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.RazorCoreGenerate.cache
@@ -271,3 +269,4 @@ C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\ne
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.dll
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.pdb
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.genruntimeconfig.cache
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\AgenceVoyage.StaticWebAssets.xml

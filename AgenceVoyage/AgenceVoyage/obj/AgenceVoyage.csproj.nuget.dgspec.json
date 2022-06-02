@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maxime\\source\\repos\\TpWebService\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj": {}
+    "D:\\Documents\\EPSI\\B3\\Semestre2\\WebService\\Projet\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maxime\\source\\repos\\TpWebService\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj": {
+    "D:\\Documents\\EPSI\\B3\\Semestre2\\WebService\\Projet\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxime\\source\\repos\\TpWebService\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj",
+        "projectUniqueName": "D:\\Documents\\EPSI\\B3\\Semestre2\\WebService\\Projet\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj",
         "projectName": "AgenceVoyage",
-        "projectPath": "C:\\Users\\maxime\\source\\repos\\TpWebService\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj",
-        "packagesPath": "C:\\Users\\maxime\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maxime\\source\\repos\\TpWebService\\AgenceVoyage\\AgenceVoyage\\obj\\",
+        "projectPath": "D:\\Documents\\EPSI\\B3\\Semestre2\\WebService\\Projet\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage.csproj",
+        "packagesPath": "C:\\Users\\gaell\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\EPSI\\B3\\Semestre2\\WebService\\Projet\\AgenceVoyage\\AgenceVoyage\\AgenceVoyage\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gaell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,12 +83,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.24, 3.1.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -100,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

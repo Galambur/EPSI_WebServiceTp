@@ -24,14 +24,13 @@ namespace AgenceVoyage.Controllers
             return View();
         }
 
-        [HttpPost]
-        [Route("/modificationReservation/nbrPassagers")]
-        public IActionResult ModifyNbrPassagers([FromBody()] Reservation reservationToModify)
+        [HttpPost("{idReservation}")]
+        public IActionResult ModifyNbrPassagers(int idReservation, [FromBody()] int nbrPassagers)
         {
-            var reservation = model.Reservation.Single(r => r.IdReservation == reservationToModify.IdReservation);
+            var reservation = model.Reservation.Single(r => r.IdReservation == idReservation);
             try
             {
-                reservation.NbrPassager = reservationToModify.NbrPassager;
+                reservation.NbrPassager = nbrPassagers;
                 model.SaveChanges();
                 return Ok();
             } catch (Exception e)
