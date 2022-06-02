@@ -25,6 +25,8 @@ namespace AgenceVoyage.Controllers
         {
             try
             {
+                reservationSimpleToAdd.Confirme = false;
+                reservationSimpleToAdd.Annule = false;
                 var reservationAdd = model.Reservation.Add(reservationSimpleToAdd);
                 model.SaveChanges();
 
