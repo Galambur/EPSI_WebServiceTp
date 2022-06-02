@@ -26,14 +26,16 @@ namespace AgenceVoyage.Controllers
         }
 
         
-        [HttpPost("{listTrain}")]
-        public IActionResult ModifyNbrPassagers([FromBody()] ReservationMultiRequest reservationMultiRequest)
+        [HttpPost("AjouterReservation")]
+        public IActionResult AjouterReservation([FromBody()] ReservationMultiRequest reservationMultiRequest)
         {
             try
             {
+                // Vérification du nombre de destinations
                 if(reservationMultiRequest.villes.Count < 2)
                     return BadRequest("Deux destinations minimum.");
 
+                // Binding des destinations avec les gares
                 var destinations = new List<Gare>();
                 StringBuilder msgDestinations = new StringBuilder();
                 msgDestinations.AppendLine("Gares sélectionné : ");
@@ -59,7 +61,7 @@ namespace AgenceVoyage.Controllers
                     destinations.Add(destination);
                 }
 
-
+                // Recherche des correspondances avec les gares
                 var correspondances = new List<Train>();
                 for (int i = 1; i < destinations.Count; i++)
                 {
@@ -74,7 +76,7 @@ namespace AgenceVoyage.Controllers
                 }
                 
 
-                // La réservation des trains
+                // Création de la réservation
                 var reservationModel = new Reservation();
                 reservationModel.NbrPassager = reservationMultiRequest.nbrPassager;
                 reservationModel.IdClient = reservationMultiRequest.idClient;
@@ -84,6 +86,7 @@ namespace AgenceVoyage.Controllers
                 Reservation reservation = model.Reservation.Add(reservationModel).Entity;
                 model.SaveChanges();
 
+                // Ajout des réservations aux correspondances
                 StringBuilder msgReservationTrain = new StringBuilder();
                 msgReservationTrain.AppendLine("Réservation de train ajouté : ");
                 foreach (var train in correspondances)
@@ -98,7 +101,7 @@ namespace AgenceVoyage.Controllers
 
                 model.SaveChanges();
 
-
+                // Message récapitulatif
                 StringBuilder msgResultat = new StringBuilder();
                 msgResultat.AppendLine(msgDestinations.ToString());
                 msgResultat.AppendLine(msgReservationTrain.ToString());

@@ -27,9 +27,11 @@ namespace AgenceVoyage.Controllers
         [HttpPost("{idReservation}")]
         public IActionResult ModifyNbrPassagers(int idReservation, [FromBody()] int nbrPassagers)
         {
-            var reservation = model.Reservation.Single(r => r.IdReservation == idReservation);
             try
             {
+                var reservation = model.Reservation.SingleOrDefault(r => r.IdReservation == idReservation);
+                if (reservation == null || reservation == default(Reservation))
+                    return BadRequest("Identifiant de réservation introuvable.");
                 reservation.NbrPassager = nbrPassagers;
                 model.SaveChanges();
                 return Ok();
