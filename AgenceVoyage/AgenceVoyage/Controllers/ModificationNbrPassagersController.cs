@@ -10,18 +10,13 @@ namespace AgenceVoyage.Controllers
 {
     [ApiController]
     [Route("/modificationReservation")]
-    public class ModificationNbrPassagersController : Controller
+    public class ModificationNbrPassagersController : ControllerBase
     {
 
         public tpagencevoyageContext model = new tpagencevoyageContext();
 
         public ModificationNbrPassagersController()
         {
-        }
-
-        public IActionResult ModificationNbrPassagers()
-        {
-            return View();
         }
 
         [HttpPost("{idReservation}")]
@@ -35,7 +30,8 @@ namespace AgenceVoyage.Controllers
                 reservation.NbrPassager = nbrPassagers;
                 model.SaveChanges();
                 return Ok();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 throw e;
             }

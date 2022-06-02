@@ -11,7 +11,7 @@ namespace AgenceVoyage.Controllers
 {
     [ApiController]
     [Route("/reservationMultiDestination")]
-    public class reservationMultiDestination : Controller
+    public class reservationMultiDestination : ControllerBase
     {
 
         public tpagencevoyageContext model = new tpagencevoyageContext();
@@ -20,19 +20,13 @@ namespace AgenceVoyage.Controllers
         {
         }
 
-        public IActionResult ReservationSimple()
-        {
-            return View();
-        }
-
-        
-        [HttpPost("AjouterReservation")]
+        [HttpPut("AjouterReservation")]
         public IActionResult AjouterReservation([FromBody()] ReservationMultiRequest reservationMultiRequest)
         {
             try
             {
                 // Vérification du nombre de destinations
-                if(reservationMultiRequest.villes.Count < 2)
+                if (reservationMultiRequest.villes.Count < 2)
                     return BadRequest("Deux destinations minimum.");
 
                 // Binding des destinations avec les gares
@@ -56,7 +50,7 @@ namespace AgenceVoyage.Controllers
                         return BadRequest(msgDestinations.ToString());
                     }
                     else
-                        msgDestinations.AppendLine(" - Gare n°" + destination.IdGare + ": "+ item.NomVille);
+                        msgDestinations.AppendLine(" - Gare n°" + destination.IdGare + ": " + item.NomVille);
 
                     destinations.Add(destination);
                 }
@@ -65,16 +59,16 @@ namespace AgenceVoyage.Controllers
                 var correspondances = new List<Train>();
                 for (int i = 1; i < destinations.Count; i++)
                 {
-                    var dGare = destinations[i-1];
+                    var dGare = destinations[i - 1];
                     var aGare = destinations[i];
                     var train = ToolsForTrain.TrouverTrainEntreDeuxDestintation(model, dGare, aGare);
                     if (train == null)
                         return BadRequest(msgDestinations.ToString() + "Aucune correspondance trouvée entre " + dGare.NomGare + " et " + aGare.NomGare);
 
-                    if(!correspondances.Contains(train))
+                    if (!correspondances.Contains(train))
                         correspondances.Add(train);
                 }
-                
+
 
                 // Création de la réservation
                 var reservationModel = new Reservation();
@@ -94,7 +88,7 @@ namespace AgenceVoyage.Controllers
                     var trainReservModel = new Trainreservation();
                     trainReservModel.IdReservation = reservation.IdReservation;
                     trainReservModel.IdTrain = train.IdTrain;
-                    
+
                     Trainreservation trainReserv = model.Trainreservation.Add(trainReservModel).Entity;
                     msgReservationTrain.AppendLine(" - Réservation du train n°" + train.IdTrain + " ajouté à la réservation n°" + trainReserv.IdReservation);
                 }
@@ -112,19 +106,12 @@ namespace AgenceVoyage.Controllers
                 msgResultat.AppendLine(" - Reservation ajouté au client n°" + reservationMultiRequest.idClient);
 
 
-
-                return Created("/reservationMultiDestination/",  msgResultat.ToString());
+                return Created("/reservationMultiDestination/", msgResultat.ToString());
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-
-
-
     }
-
-
-
 }

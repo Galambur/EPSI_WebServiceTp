@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "d9fda61e-d61d-486d-a390-54a0186c4c62",
+		"name": "EPSI - ServiceWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20967864"
+	},
+	"item": [
+		{
+			"name": "reservationMultiDestination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t\r\n{\r\n    \"idClient\":1,\r\n    \"nbrPassager\":5,\r\n    \"villes\":[\r\n    {\r\n        \"IdVille\":1,\r\n        \"NomVille\":\"Montpellier\",\r\n        \"CodePostal\":\"34\"\r\n    },\r\n    {\r\n        \"IdVille\":3,\r\n        \"NomVille\":\"Toulouse\",\r\n        \"CodePostal\":\"13\"\r\n    },\r\n    {\r\n        \"IdVille\":4,\r\n        \"NomVille\":\"Paris\",\r\n        \"CodePostal\":\"75\"\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44387/reservationMultiDestination/AjouterReservation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44387",
+					"path": [
+						"reservationMultiDestination",
+						"AjouterReservation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "1 Correspondance - 3 Destinations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t\r\n{\r\n    \"idClient\":1,\r\n    \"nbrPassager\":5,\r\n    \"villes\":[\r\n    {\r\n        \"IdVille\":1,\r\n        \"NomVille\":\"Montpellier\",\r\n        \"CodePostal\":\"34\"\r\n    },\r\n    {\r\n        \"IdVille\":2,\r\n        \"NomVille\":\"Marseille\",\r\n        \"CodePostal\":\"13\"\r\n    },\r\n    {\r\n        \"IdVille\":3,\r\n        \"NomVille\":\"Toulouse\",\r\n        \"CodePostal\":\"31\"\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44387/reservationMultiDestination/AjouterReservation",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44387",
+							"path": [
+								"reservationMultiDestination",
+								"AjouterReservation"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/reservationMultiDestination/"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Jun 2022 07:03:53 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Gares sélectionné : \r\n - Gare n°1: Montpellier\r\n - Gare n°2: Marseille\r\n - Gare n°3: Toulouse\r\n\r\nRéservation de train ajouté : \r\n - Réservation du train n°1 ajouté à la réservation n°18\r\n\r\nRésulat de la réservation\r\n - 3 destinations\r\n - 1 correspondance\r\n - 5 passager(s) ajouté à la réservation\r\n - Reservation ajouté au client n°1\r\n"
+				},
+				{
+					"name": "2 Correspondances - 3 Destinations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t\r\n{\r\n    \"idClient\":1,\r\n    \"nbrPassager\":5,\r\n    \"villes\":[\r\n    {\r\n        \"IdVille\":1,\r\n        \"NomVille\":\"Montpellier\",\r\n        \"CodePostal\":\"34\"\r\n    },\r\n    {\r\n        \"IdVille\":3,\r\n        \"NomVille\":\"Toulouse\",\r\n        \"CodePostal\":\"13\"\r\n    },\r\n    {\r\n        \"IdVille\":4,\r\n        \"NomVille\":\"Paris\",\r\n        \"CodePostal\":\"75\"\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44387/reservationMultiDestination/AjouterReservation",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44387",
+							"path": [
+								"reservationMultiDestination",
+								"AjouterReservation"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/reservationMultiDestination/"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Jun 2022 07:05:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "415"
+						}
+					],
+					"cookie": [],
+					"body": "Gares sélectionné : \r\n - Gare n°1: Montpellier\r\n - Gare n°3: Toulouse\r\n - Gare n°4: Paris\r\n\r\nRéservation de train ajouté : \r\n - Réservation du train n°1 ajouté à la réservation n°19\r\n - Réservation du train n°2 ajouté à la réservation n°19\r\n\r\nRésulat de la réservation\r\n - 3 destinations\r\n - 2 correspondance\r\n - 5 passager(s) ajouté à la réservation\r\n - Reservation ajouté au client n°1\r\n"
+				},
+				{
+					"name": "Aucune correspondance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t\r\n{\r\n    \"idClient\":1,\r\n    \"nbrPassager\":5,\r\n    \"villes\":[\r\n    {\r\n        \"IdVille\":1,\r\n        \"NomVille\":\"Montpellier\",\r\n        \"CodePostal\":\"34\"\r\n    },\r\n    {\r\n        \"IdVille\":2,\r\n        \"NomVille\":\"Marseille\",\r\n        \"CodePostal\":\"13\"\r\n    },\r\n    {\r\n        \"IdVille\":4,\r\n        \"NomVille\":\"Paris\",\r\n        \"CodePostal\":\"75\"\r\n    }\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44387/reservationMultiDestination/AjouterReservation",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44387",
+							"path": [
+								"reservationMultiDestination",
+								"AjouterReservation"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Jun 2022 07:05:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						}
+					],
+					"cookie": [],
+					"body": "Gares sélectionné : \r\n - Gare n°1: Montpellier\r\n - Gare n°2: Marseille\r\n - Gare n°4: Paris\r\nAucune correspondance trouvée entre Une autre garre et Gare de paris"
+				}
+			]
+		},
+		{
+			"name": "modificationReservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "50",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44387/modificationReservation/32",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44387",
+					"path": [
+						"modificationReservation",
+						"32"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Modif nbr passager - reserv n°32",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "50",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44387/modificationReservation/32",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44387",
+							"path": [
+								"modificationReservation",
+								"32"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Jun 2022 08:17:09 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "reservationSimple",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NbrPassager\": 15,\r\n    \"IdClient\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44387/reservationSimple/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44387",
+					"path": [
+						"reservationSimple",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reservation n°33",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NbrPassager\": 15,\r\n    \"IdClient\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44387/reservationSimple/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44387",
+							"path": [
+								"reservationSimple",
+								"1"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/reservationSimple/1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Jun 2022 08:19:40 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idReservation\": 33,\n    \"confirme\": false,\n    \"annule\": false,\n    \"nbrPassager\": 15,\n    \"idClient\": 1\n}"
+				}
+			]
+		}
+	]
+}

@@ -6,18 +6,13 @@ namespace AgenceVoyage.Controllers
 {
     [ApiController]
     [Route("/reservationSimple")]
-    public class ReservationSimpleController : Controller
+    public class ReservationSimpleController : ControllerBase
     {
 
         public tpagencevoyageContext model = new tpagencevoyageContext();
 
         public ReservationSimpleController()
         {
-        }
-
-        public IActionResult ReservationSimple()
-        {
-            return View();
         }
 
         [HttpPut("{idTrain}")]

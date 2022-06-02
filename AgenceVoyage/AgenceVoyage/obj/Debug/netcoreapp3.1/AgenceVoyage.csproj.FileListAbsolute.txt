@@ -269,3 +269,9 @@ C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\ne
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.dll
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.pdb
 C:\Users\maxime\Source\Repos\TpWebService\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.genruntimeconfig.cache
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Postman\EPSI - ServiceWeb.postman_collection.json
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.MvcApplicationPartsAssemblyInfo.cs
