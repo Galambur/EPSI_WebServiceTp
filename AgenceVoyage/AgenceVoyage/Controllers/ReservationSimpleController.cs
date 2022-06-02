@@ -21,7 +21,7 @@ namespace AgenceVoyage.Controllers
         }
 
         [HttpPut("{idTrain}")]
-        public IActionResult ModifyNbrPassagers(int idTrain, [FromBody()] Reservation reservationSimpleToAdd)
+        public IActionResult AddNewReservationSimple(int idTrain, [FromBody()] Reservation reservationSimpleToAdd)
         {
             try
             {
