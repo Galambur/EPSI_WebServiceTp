@@ -1,6 +1,7 @@
 using AgenceVoyage.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace AgenceVoyage.Controllers
 {
@@ -21,9 +22,20 @@ namespace AgenceVoyage.Controllers
         /// <param name="idTrain">L'id du train à prendre</param>
         /// <param name="reservationSimpleToAdd">Les informations de la réservation</param>
         /// <returns>Un code 201 ou une erreur</returns>
+        /// <remarks>
+        ///     Pour l'objet Reservation, il suffit de remplir 
+        /// </remarks>
         [HttpPut("{idTrain}")]
         public IActionResult AddNewReservationSimple(int idTrain, [FromBody()] Reservation reservationSimpleToAdd)
         {
+            var trainDb = model.Train.SingleOrDefault(t => t.IdTrain == idTrain);
+            if(trainDb == null)
+                return BadRequest("Le train choisi est introuvable");
+
+            var utilisateurDb = model.Client.SingleOrDefault(u => u.IdClient == reservationSimpleToAdd.IdClient);
+            if (utilisateurDb == null)
+                return BadRequest("Le client choisi n'existe pas");
+
             try
             {
                 reservationSimpleToAdd.Confirme = false;
@@ -35,11 +47,11 @@ namespace AgenceVoyage.Controllers
                 model.Trainreservation.Add(trainReservation);
                 model.SaveChanges();
 
-                return Created("/reservationSimple/" + idTrain, reservationSimpleToAdd);
+                return Created("", reservationSimpleToAdd);
             }
             catch (Exception e)
             {
-                throw e;
+                return BadRequest();
             }
         }
     }
