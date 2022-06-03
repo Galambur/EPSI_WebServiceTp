@@ -21,9 +21,11 @@ namespace AgenceVoyage.Controllers
         /// </summary>
         /// <param name="idTrain">L'id du train à prendre</param>
         /// <param name="reservationSimpleToAdd">Les informations de la réservation</param>
-        /// <returns>Un code 201 ou une erreur</returns>
+        /// <response code="201">La réservation a été correctement créée</response>  
+        /// <response code="400">L'identification du train ou du salarié est incorrect</response>  
+        /// <response code="500">Une erreur s'est produite pendant le traitement</response>  
         /// <remarks>
-        ///     Pour l'objet Reservation, il suffit de remplir 
+        ///     Pour l'objet Reservation, il suffit de remplir idClient et nbrPassagers, le reste se fait tout seul
         /// </remarks>
         [HttpPut("{idTrain}")]
         public IActionResult AddNewReservationSimple(int idTrain, [FromBody()] Reservation reservationSimpleToAdd)

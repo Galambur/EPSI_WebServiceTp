@@ -25,7 +25,8 @@ namespace AgenceVoyage.Controllers
         /// </ br> Chaque gare est sélectionné avec l'id de la ville.
         /// </summary>
         /// <param name="reservationMultiRequest">L'objet de réservation et les trains voulus</param>
-        /// <returns>Un code 201 ou une erreur</returns>
+        /// <response code="201">La création s'est correctement déroulée</response>
+        /// <response code="400">Un des éléments n'a pas été trouvé dans la base de données, ou il y a moins de deux destinations</response>  
         [HttpPut]
         public IActionResult AjouterReservation([FromBody()] Request_ReservationMulti reservationMultiRequest)
         {

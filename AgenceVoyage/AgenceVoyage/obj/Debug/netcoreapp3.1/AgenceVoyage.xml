@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgenceVoyage</name>
+    </assembly>
+    <members>
+        <member name="M:AgenceVoyage.Controllers.ModificationNbrPassagersController.ModifyNbrPassagers(System.Int32,System.Int32)">
+            <summary>
+            Modifier le nombre de passager d'une réservation
+            </summary>
+            <param name="idReservation">L'identifiant de la réservation à modifier</param>
+            <param name="nbrPassagers">Le nouveau nommbre de passagers</param>
+            <response code="200">La création s'est faite</response>
+            <response code="400">L'identifiant de la reservation est introuvable</response>  
+            <response code="500">Une erreur s'est produite pendant le traitement</response>  
+        </member>
+        <member name="M:AgenceVoyage.Controllers.reservationMultiDestination.AjouterReservation(AgenceVoyage.ModelsRequest.ReservationMultiRequest)">
+            <summary>
+            Ajoute une réservation avec plusieurs trains
+            </summary>
+            <param name="reservationMultiRequest">L'objet de réservation et les trains voulus</param>
+            <response code="201">La création s'est correctement déroulée</response>
+            <response code="400">Un des éléments n'a pas été trouvé dans la base de données, ou il y a moins de deux destinations</response>  
+        </member>
+        <member name="M:AgenceVoyage.Controllers.ReservationSimpleController.AddNewReservationSimple(System.Int32,AgenceVoyage.Models.Reservation)">
+            <summary>
+            Ajoute une réservation simple
+            </summary>
+            <param name="idTrain">L'id du train à prendre</param>
+            <param name="reservationSimpleToAdd">Les informations de la réservation</param>
+            <response code="201">La réservation a été correctement créée</response>  
+            <response code="400">L'identification du train ou du salarié est incorrect</response>  
+            <response code="500">Une erreur s'est produite pendant le traitement</response>  
+            <remarks>
+                Pour l'objet Reservation, il suffit de remplir idClient et nbrPassagers, le reste se fait tout seul
+            </remarks>
+        </member>
+    </members>
+</doc>

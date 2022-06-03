@@ -275,3 +275,5 @@ D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\Agenc
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.MvcApplicationPartsAssemblyInfo.cs
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\bin\Debug\netcoreapp3.1\AgenceVoyage.xml
+D:\Documents\EPSI\B3\Semestre2\WebService\Projet\AgenceVoyage\AgenceVoyage\AgenceVoyage\obj\Debug\netcoreapp3.1\AgenceVoyage.xml

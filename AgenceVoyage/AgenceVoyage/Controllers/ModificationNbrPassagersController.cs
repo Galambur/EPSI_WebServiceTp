@@ -23,8 +23,10 @@ namespace AgenceVoyage.Controllers
         /// Modifier le nombre de passager d'une réservation
         /// </summary>
         /// <param name="idReservation">L'identifiant de la réservation à modifier</param>
-        /// <param name="nbrPassagers">Le nouveau nommbre de passagers</param>
-        /// <returns type="IActionResult">Un code 200 / 204 ou 500</returns>
+        /// <param name="nbrPassagers">Le nouveau nombre de passagers</param>
+        /// <response code="200">La modification s'est faite</response>
+        /// <response code="400">L'identifiant de la reservation est introuvable</response>  
+        /// <response code="500">Une erreur s'est produite pendant le traitement</response>  
         [HttpPost("{idReservation}")]
         public IActionResult ModifyNbrPassagers(int idReservation, [FromBody()] int nbrPassagers)
         {
