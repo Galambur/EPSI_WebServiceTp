@@ -20,7 +20,12 @@ namespace AgenceVoyage.Controllers
         {
         }
 
-        [HttpPut("AjouterReservation")]
+        /// <summary>
+        /// Ajoute une réservation avec plusieurs trains
+        /// </summary>
+        /// <param name="reservationMultiRequest">L'objet de réservation et les trains voulus</param>
+        /// <returns>Un code 201 ou une erreur</returns>
+        [HttpPut]
         public IActionResult AjouterReservation([FromBody()] ReservationMultiRequest reservationMultiRequest)
         {
             try
