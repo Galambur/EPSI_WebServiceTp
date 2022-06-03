@@ -37,7 +37,7 @@ namespace AgenceVoyage.Controllers
             {
                 var reservation = model.Reservation.SingleOrDefault(r => r.IdReservation == idReservation);
                 if (reservation == null || reservation == default(Reservation))
-                    return NoContent();
+                    return BadRequest("La réservation est introuvable");
                 reservation.NbrPassager = nbrPassagers;
                 model.SaveChanges();
                 return Ok();
